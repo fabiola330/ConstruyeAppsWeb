@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construye Aplicaciones Web - Inicio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS propio -->
+    <link rel="stylesheet" href="adorno.css">
+</head>
+<body>
+
+    <!-- ETIQUETA SEMÁNTICA: HEADER (Encabezado) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Construye Apps Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="preguntasFrecuentes.html">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="listas.html">Listas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="via.html">VÍA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hipervinculos.html">Hipervínculos</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="javascript.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ETIQUETA SEMÁNTICA: MAIN (Contenido principal de la página) -->
+    <main class="container mt-5 mb-5 flex-grow-1">
+        
+        <!-- ETIQUETA SEMÁNTICA: SECTION (Agrupa contenido relacionado) -->
+        <section class="mi-caja">
+            
+            <!-- ETIQUETA SEMÁNTICA: ARTICLE (Contenido independiente, como un post) -->
+            <article class="text-center mb-5">
+                <h1 class="text-primary fw-bold mb-3 display-5">Construye Aplicaciones Web</h1>
+                <p class="lead mb-4">Bienvenido a tu guía de estudio. Aquí aprenderás los conceptos básicos de HTML, CSS y JavaScript.</p>
+                
+                <!-- Imagen con marco y estilo -->
+               <figure class="figure w-100">
+    <!-- Se agrega w-100 para que respete el ancho y mx-auto para centrar -->
+                <img src="logo bien.png" alt="Ilustración de una computadora mostrando código HTML y CSS" class="figure-img img-fluid rounded shadow mx-auto d-block" style="max-width: 100%; width: 600px;">
+                      <figcaption class="figure-caption text-center fw-bold text-muted mt-2">Módulo: Construye Aplicaciones Web</figcaption>
+                </figure>
+            </article>
+
+            <hr class="my-5">
+
+            <!-- ETIQUETA SEMÁNTICA: SECTION (Sección del formulario) -->
+            <section class="row justify-content-center">
+                <div class="col-lg-10">
+                    <article class="card shadow-sm border-0 bg-light p-4 rounded">
+                        <h3 class="text-primary mb-3">Pero antes, déjanos conocerte</h3>
+                        <p>Ingresa tus datos para personalizar tu experiencia en esta guía de estudio.</p>
+
+                        <form id="formularioRegistro" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label fw-bold">Escribe tu Nombre:</label>
+                                <input type="text" class="form-control border-primary" id="nombre" placeholder="Nombre" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="apellidos" class="form-label fw-bold">Escribe tus apellidos:</label>
+                                <input type="text" class="form-control border-primary" id="apellidos" placeholder="Apellidos" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="edad" class="form-label fw-bold">Escribe tu edad:</label>
+                                <input type="number" class="form-control border-primary" id="edad" placeholder="Ej. 17" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="grado" class="form-label fw-bold">Tu grado escolar:</label>
+                                <input type="text" class="form-control border-primary" id="grado" placeholder="Ej. 4to Semestre" required>
+                            </div>
+                            
+                            <div class="col-12 mt-4 text-center">
+                                <button type="button" class="btn btn-primary px-5 py-2 fw-bold" onclick="procesarDatos()">Enviar datos</button>
+                                <button type="reset" class="btn btn-outline-secondary px-4 py-2">Limpiar</button>
+                            </div>
+                        </form>
+
+                        <!-- Alerta visual -->
+                        <div id="cajaAlerta" class="mt-4"></div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <!-- ETIQUETA SEMÁNTICA: ASIDE (Contenido secundario o extra) -->
+            <aside class="text-center bg-light p-4 rounded shadow-sm">
+                <h4 class="text-primary fw-bold mb-3"> Música para estudiar</h4>
+                <p class="text-muted">Si has completado tu guía ¡Da clic en el audio y disfruta!</p>
+                <audio src="Don t Stop Til You Get Enough  Michael Jackson.m4a" controls class="w-100 shadow-sm rounded" style="max-width: 500px;"></audio>
+            </aside>
+
+        </section> <!-- Fin de la sección principal -->
+
+    </main>
+
+    <!-- ETIQUETA SEMÁNTICA: FOOTER (Pie de página) -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 fw-bold">Proyecto : Construye Aplicaciones Web</p>
+            <p class="mb-0 text-secondary"><small>Creado por Fabiola Angeles Lozano &copy; 2026</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT: Lógica del formulario y la alerta -->
+    <script>
+        function procesarDatos() {
+            let nombre = document.getElementById("nombre").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let edad = parseInt(document.getElementById("edad").value);
+            let grado = document.getElementById("grado").value;
+            let cajaAlerta = document.getElementById("cajaAlerta");
+
+            if (nombre === "" || apellidos === "" || isNaN(edad) || grado === "") {
+                cajaAlerta.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>¡Error!</strong> Por favor, llena todos los campos correctamente.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+                return;
+            }
+
+            localStorage.setItem("nombreEstudiante", nombre);
+
+            let mensaje = `¡Hola <strong>${nombre} ${apellidos}</strong>! Tienes ${edad} años y estás en ${grado}. `;
+            
+            if (edad >= 15 && edad <= 18) {
+                mensaje += "¡Estás en la edad perfecta para dominar esta materia!";
+            } else {
+                mensaje += "¡Nunca es tarde para aprender a programar!";
+            }
+
+            cajaAlerta.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <h4 class="alert-heading">¡Registro exitoso!</h4>
+                    <p>${mensaje}</p>
+                    <hr>
+                    <p class="mb-0">Ya puedes navegar por el menú superior. Tu nombre aparecerá en las demás páginas.</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+            
+            document.getElementById("formularioRegistro").reset();
+        }
+    </script>
+</body>
+</html>

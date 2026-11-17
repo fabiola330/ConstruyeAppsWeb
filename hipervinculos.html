@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipervínculos en HTML - Construye Apps Web</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS propio -->
+    <link rel="stylesheet" href="adorno.css">
+</head>
+<body class="bg-light">
+
+    <!-- ETIQUETA SEMÁNTICA: HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Construye Apps Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="preguntasFrecuentes.html">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="listas.html">Listas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="via.html">VÍA</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="hipervinculos.html">Hipervínculos</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="javascript.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ETIQUETA SEMÁNTICA: MAIN -->
+    <main class="container mt-5 mb-5">
+        <div class="mi-caja shadow">
+            
+            <!-- Saludo dinámico -->
+            <h4 id="saludoEstudiante" class="text-success fw-bold mb-4"></h4>
+
+            <h2 class="text-primary fw-bold mb-4">Hipervínculos en HTML</h2>
+            
+            <p class="lead">
+                En este apartado aprenderemos a insertar hipervínculos en HTML. Un hipervínculo es un elemento que conecta una página web con otra, con un archivo, o con una sección específica dentro del mismo documento.
+            </p>
+            <p>Permite a los usuarios navegar por la web con un solo clic.</p>
+
+            <hr>
+
+            <!-- ====== EJEMPLO DE CÓDIGO ====== -->
+            <h4 class="fw-bold mt-4">¿Cómo se crea un hipervínculo?</h4>
+            <p>Se utiliza la etiqueta <code>&lt;a&gt;</code> junto con el atributo <code>href</code> (que indica el destino) y <code>target="_blank"</code> (para abrir en una nueva pestaña):</p>
+            
+            <div class="bg-dark text-white p-3 rounded mb-4 shadow-sm">
+                <code style="font-size: 1rem; color: #f8f9fa;">
+                    &lt;a href="https://www.google.com" target="_blank"&gt;Dar click aquí para ir a Google&lt;/a&gt;
+                </code>
+            </div>
+
+            <!-- ====== VIDEO ESTILIZADO ====== -->
+            <h4 class="fw-bold mt-5 mb-4 text-center">Video Explicativo</h4>
+            
+            <!-- Tarjeta para centrar el video -->
+            <div class="card shadow-sm mx-auto" style="max-width: 600px;">
+                <div class="card-body text-center p-3">
+                    <!-- Video responsivo -->
+                    <video src="hipervinculo.mp4" controls class="w-100 rounded" style="max-height: 350px; object-fit: cover;">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                    <p class="text-muted mt-3 mb-0"><small>Demostración práctica de cómo funciona un enlace.</small></p>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+          
+        </div> <!-- Fin de mi-caja -->
+    </main>
+
+    <!-- ETIQUETA SEMÁNTICA: FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">Proyecto Escolar: Construye Aplicaciones Web</p>
+            <p class="mb-0 text-muted"><small>Creado por Fabiola Angeles Lozano &copy; 2024</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para el saludo dinámico -->
+    <script>
+        let nombreGuardado = localStorage.getItem("nombreEstudiante");
+        let lugarSaludo = document.getElementById("saludoEstudiante");
+
+        if (nombreGuardado !== null && lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola " + nombreGuardado + "! Estás repasando el tema de Hipervínculos.";
+        } else if (lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola! Estás repasando el tema de Hipervínculos. (Regresa al inicio para poner tu nombre)";
+        }
+    </script>
+</body>
+</html>

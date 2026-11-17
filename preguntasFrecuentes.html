@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Construye Apps Web</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS propio -->
+    <link rel="stylesheet" href="adorno.css">
+</head>
+<body class="bg-light">
+
+    <!-- ETIQUETA SEMÁNTICA: HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Construye Apps Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="preguntasFrecuentes.html">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="listas.html">Listas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="via.html">VÍA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hipervinculos.html">Hipervínculos</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="javascript.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ETIQUETA SEMÁNTICA: MAIN -->
+    <main class="container mt-5 mb-5">
+        <div class="mi-caja shadow">
+            
+            <!-- Saludo dinámico -->
+            <h4 id="saludoEstudiante" class="text-success fw-bold mb-4"></h4>
+
+            <h2 class="text-primary fw-bold mb-4">Preguntas Frecuentes</h2>
+            <p class="lead mb-4">Haz clic en cada pregunta para ver la respuesta.</p>
+
+            <!-- ACORDEÓN DE PREGUNTAS -->
+            <div class="accordion shadow-sm" id="acordeonPreguntas">
+                
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#p1">
+                            ¿Qué es un sitio web?
+                        </button>
+                    </h2>
+                    <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#acordeonPreguntas">
+                        <div class="accordion-body">
+                            Es un conjunto de páginas web relacionadas que se pueden consultar en internet.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#p2">
+                            ¿Qué significa HTML y qué representa cada una de sus palabras?
+                        </button>
+                    </h2>
+                    <div id="p2" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                        <div class="accordion-body">
+                            Significa Lenguaje de Marcado Hipertexto, por sus siglas en inglés <em>HyperText Markup Language</em>.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#p3">
+                            ¿Quién interpreta las etiquetas HTML?
+                        </button>
+                    </h2>
+                    <div id="p3" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                        <div class="accordion-body">
+                            El navegador (como Google Chrome, Edge, Firefox, etc.).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#p4">
+                            ¿Qué diferencias existen entre HTML y CSS?
+                        </button>
+                    </h2>
+                    <div id="p4" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                        <div class="accordion-body">
+                            HTML estructura el contenido de la página (el esqueleto), mientras que CSS define su diseño y apariencia (la ropa y los colores).
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#p5">
+                            ¿Qué es un protocolo de comunicación en internet y por qué es necesario?
+                        </button>
+                    </h2>
+                    <div id="p5" class="accordion-collapse collapse" data-bs-parent="#acordeonPreguntas">
+                        <div class="accordion-body">
+                            Es un conjunto de reglas para que los dispositivos puedan comunicarse y compartir información correctamente. Sin ellos, los dispositivos no se entenderían entre sí.
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Fin del acordeón -->
+
+            <hr class="my-5">
+
+            <!-- EJEMPLOS EN TARJETAS -->
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-success fw-bold">Ejemplos de navegadores</h5>
+                            <ul class="mt-3">
+                                <li>Google Chrome</li>
+                                <li>Microsoft Edge</li>
+                                <li>Mozilla Firefox</li>
+                                <li>Brave</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-success fw-bold">Ejemplos de protocolos</h5>
+                            <ul class="mt-3">
+                                <li>HTTP (HyperText Transfer Protocol)</li>
+                                <li>HTTPS (HTTP Seguro)</li>
+                                <li>FTP (File Transfer Protocol)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- Fin de mi-caja -->
+    </main>
+
+    <!-- ETIQUETA SEMÁNTICA: FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">Proyecto Escolar: Construye Aplicaciones Web</p>
+            <p class="mb-0 text-muted"><small>Creado por Fabiola Angeles Lozano &copy; 2024</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Necesario para el acordeón) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para el saludo dinámico -->
+    <script>
+        let nombreGuardado = localStorage.getItem("nombreEstudiante");
+        let lugarSaludo = document.getElementById("saludoEstudiante");
+
+        if (nombreGuardado !== null && lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola " + nombreGuardado + "! Estás repasando las Preguntas Frecuentes.";
+        } else if (lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola! Estás repasando las Preguntas Frecuentes. (Regresa al inicio para poner tu nombre)";
+        }
+    </script>
+</body>
+</html>

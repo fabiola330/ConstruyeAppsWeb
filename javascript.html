@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de JavaScript - Construye Apps Web</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu CSS propio -->
+    <link rel="stylesheet" href="adorno.css">
+</head>
+<body class="bg-light">
+
+    <!-- ETIQUETA SEMÁNTICA: HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Construye Apps Web</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="preguntasFrecuentes.html">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="listas.html">Listas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="via.html">VÍA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hipervinculos.html">Hipervínculos</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="javascript.html">JavaScript</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ETIQUETA SEMÁNTICA: MAIN -->
+    <main class="container mt-5 mb-5">
+        <div class="mi-caja shadow">
+            
+            <!-- Saludo dinámico -->
+            <h4 id="saludoEstudiante" class="text-success fw-bold mb-4"></h4>
+
+            <h2 class="text-primary fw-bold mb-4">Introducción a JavaScript</h2>
+            
+            <p class="lead">JavaScript es un lenguaje de programación que permite agregar interactividad y funciones dinámicas a la página web. Trabaja junto con HTML (estructura) y CSS (apariencia).</p>
+            
+            <hr>
+
+            <!-- SECCIÓN DE TEORÍA CON ACORDEONES -->
+            <h4 class="fw-bold mb-3">Apuntes de la Materia</h4>
+            <p>Haz clic en cada título para leer el tema:</p>
+
+            <div class="accordion shadow-sm" id="acordeonTeoria">
+                
+                <!-- TEMA 1: ¿Qué es y para qué sirve? -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema1">
+                            ¿Qué es JavaScript y para qué sirve?
+                        </button>
+                    </h2>
+                    <div id="tema1" class="accordion-collapse collapse show" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Es un lenguaje de programación que trabaja del lado del cliente (en el navegador del usuario). Sirve para:</p>
+                            <ul>
+                                <li><strong>Agregar interactividad:</strong> Responder a clics en botones.</li>
+                                <li><strong>Validar formularios:</strong> Comprobar que los datos ingresados sean correctos antes de enviarlos.</li>
+                                <li><strong>Modificar contenido:</strong> Cambiar texto, imágenes o elementos de una página sin recargarla.</li>
+                                <li><strong>Realizar cálculos:</strong> Procesar cantidades y resultados (como una calculadora).</li>
+                                <li><strong>Crear animaciones:</strong> Generar efectos y movimientos.</li>
+                                <li><strong>Actualizar información:</strong> Modificar partes de una página sin recargarla por completo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 2: Variables -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema2">
+                            Variables (var, let, const)
+                        </button>
+                    </h2>
+                    <div id="tema2" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Las variables son espacios identificados por un nombre que permiten almacenar datos y utilizarlos durante la ejecución de un programa.</p>
+                            <table class="table table-bordered table-sm">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Palabra</th>
+                                        <th>Significado</th>
+                                        <th>Ejemplo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>var</code></td>
+                                        <td>Forma antigua de declarar variables.</td>
+                                        <td><code>var edad = 17;</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>let</code></td>
+                                        <td>Variable cuyo valor puede cambiar.</td>
+                                        <td><code>let edad = 17;</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>const</code></td>
+                                        <td>Variable constante, no puede cambiar.</td>
+                                        <td><code>const pais = "Mexico";</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 3: Tipos de Datos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema3">
+                            Tipos de Datos
+                        </button>
+                    </h2>
+                    <div id="tema3" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Indican qué clase de información almacena una variable. Los principales son:</p>
+                            <ul>
+                                <li><strong>String (Cadena):</strong> Almacena texto o palabras. Ej: <code>let nombre = "Ana";</code></li>
+                                <li><strong>Number (Número):</strong> Almacena números enteros o decimales. Ej: <code>let precio = 25.50;</code></li>
+                                <li><strong>Boolean (Booleano):</strong> Verdadero o falso (true/false). Ej: <code>let activo = true;</code></li>
+                                <li><strong>Undefined:</strong> Variable declarada sin valor asignado. Ej: <code>let resultado;</code></li>
+                                <li><strong>Null:</strong> Ausencia intencional de un valor. Ej: <code>let usuario = null;</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 4: prompt y confirm -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema4">
+                            Funciones prompt() y confirm()
+                        </button>
+                    </h2>
+                    <div id="tema4" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p><strong>prompt():</strong> Muestra una ventana donde el usuario puede escribir información. Devuelve el texto escrito.</p>
+                            <code class="d-block mb-3">let nombre = prompt("Ingresa tu nombre:");</code>
+                            
+                            <p><strong>confirm():</strong> Muestra una ventana con opciones "Aceptar" y "Cancelar". Devuelve <code>true</code> si se acepta y <code>false</code> si se cancela.</p>
+                            <code class="d-block">let respuesta = confirm("¿Deseas continuar?");</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 5: El DOM y getElementById -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema5">
+                            Manipulación del DOM (getElementById)
+                        </button>
+                    </h2>
+                    <div id="tema5" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>El DOM (Document Object Model) es la forma en que JavaScript ve el HTML. Nos permite "agarrar" etiquetas HTML y modificarlas.</p>
+                            <p>El método más común es <code>getElementById()</code>, que busca un elemento por su atributo <code>id</code>.</p>
+                            <pre class="bg-dark text-white p-3 rounded">// En HTML: &lt;p id="mensaje"&gt;Hola&lt;/p&gt;
+// En JS:
+let elemento = document.getElementById("mensaje");
+elemento.innerHTML = "¡Texto cambiado!";</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 6: parseFloat y parseInt -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema6">
+                            Convertir texto a número (parseInt y parseFloat)
+                        </button>
+                    </h2>
+                    <div id="tema6" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Como <code>prompt()</code> y los inputs devuelven texto, necesitamos convertirlos para hacer matemáticas:</p>
+                            <ul>
+                                <li><strong>parseInt():</strong> Convierte texto a número entero. Ej: <code>let edad = parseInt("25");</code></li>
+                                <li><strong>parseFloat():</strong> Convierte texto a número decimal. Ej: <code>let precio = parseFloat("25.75");</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 7: Condicionales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema7">
+                            Estructuras de control (if / else)
+                        </button>
+                    </h2>
+                    <div id="tema7" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Sirven para tomar decisiones. Si se cumple una condición, se ejecuta un bloque de código; si no, se ejecuta otro.</p>
+                            <pre class="bg-dark text-white p-3 rounded">let edad = 17;
+if (edad >= 18) {
+    console.log("Puedes votar");
+} else {
+    console.log("Aún no eres ciudadano");
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMA 8: Funciones -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tema8">
+                            Funciones
+                        </button>
+                    </h2>
+                    <div id="tema8" class="accordion-collapse collapse" data-bs-parent="#acordeonTeoria">
+                        <div class="accordion-body">
+                            <p>Son bloques de código reutilizables diseñados para realizar una tarea específica. Se ejecutan cuando se las llama.</p>
+                            <pre class="bg-dark text-white p-3 rounded">function saludar() {
+    return "¡Hola Mundo!";
+}
+// Llamar a la función:
+let mensaje = saludar();</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Fin del acordeón -->
+
+        </div> <!-- Fin de mi-caja -->
+    </main>
+
+    <!-- ETIQUETA SEMÁNTICA: FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">Proyecto Escolar: Construye Aplicaciones Web</p>
+            <p class="mb-0 text-muted"><small>Creado por Fabiola Angeles Lozano &copy; 2024</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Necesario para el acordeón) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para el saludo dinámico -->
+    <script>
+        let nombreGuardado = localStorage.getItem("nombreEstudiante");
+        let lugarSaludo = document.getElementById("saludoEstudiante");
+
+        if (nombreGuardado !== null && lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola " + nombreGuardado + "! Estás repasando la teoría de JavaScript.";
+        } else if (lugarSaludo !== null) {
+            lugarSaludo.innerHTML = "¡Hola! Estás repasando la teoría de JavaScript. (Regresa al inicio para poner tu nombre)";
+        }
+    </script>
+</body>
+</html>
